@@ -24,6 +24,12 @@ abstract class CookieJar {
   /// Load the cookies for specified [uri].
   FutureOr<List<Cookie>> loadForRequest(Uri uri);
 
+  /// Ends the current session deleting all session cookies.
+  FutureOr<void> endSession();
+
+  /// Loads all cookies in the [CookieJar].
+  FutureOr<List<Cookie>> loadAll();
+
   /// Delete all cookies in the [CookieJar].
   FutureOr<void> deleteAll();
 
